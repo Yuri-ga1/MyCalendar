@@ -4,7 +4,23 @@
     </head>
     <body>
         <div class='active_tasks'>
-            <table>
+            <div class='task_filter'>
+                <table>
+                    <tr>
+                        <td class="right_border">сегодня</td>
+                        <td class="right_border">завтра</td>
+                        <td class="right_border">на эту неделю</td>
+                        <td>на след неделю</td>
+                    </tr>
+                </table>
+            </div>
+            <table class='task_table'>
+                <tr class='tablehead'>
+                    <td class='left_padding'>Тип</td>
+                    <td class='left_padding'>Задача</td>
+                    <td class='left_padding'>Место</td>
+                    <td class='left_padding'>Дата</td>
+                </tr>
                 <?php
                     $dbname = 'notes_db';
                     $username = 'root';
@@ -27,10 +43,10 @@
                             $type = $type1['name'];
                         }
 
-                        echo '<td class=\'right_border\'>',$type ,'</td>';
-                        echo '<td class=\'right_border\'>',$row['name'] ,'</td>';
-                        echo '<td class=\'right_border\'>',$row['place'] ,'</td>';
-                        echo '<td>',$row['date'] ,'</td>';
+                        echo '<td class=\'left_padding\'>',$type ,'</td>';
+                        echo '<td class=\'left_padding\'>',$row['name'] ,'</td>';
+                        echo '<td class=\'left_padding\'>',$row['place'] ,'</td>';
+                        echo '<td class=\'left_padding\'>',$row['date'] ,'</td>';
                         echo '</tr>';
                     }
                 ?>
