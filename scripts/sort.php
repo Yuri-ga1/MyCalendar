@@ -8,10 +8,12 @@
     $html = '<table class=\'task_table\'><tr class=\'tablehead\'><td class=\'left_padding\'>Тип</td><td class=\'left_padding\'>Задача</td><td class=\'left_padding\'>Место</td><td class=\'left_padding\'>Дата</td></tr>';
 
     $range = [
+        'all' => '',
         'today' => ' WHERE CURDATE() = `date`',
         'tomorrow' => ' WHERE CURDATE()+1 = `date`',
         'thisweek' => ' WHERE DAYOFYEAR(`date`) - DAYOFYEAR(CURTIME()) BETWEEN 0 AND 7',
-        'nextweek' => ' WHERE DAYOFYEAR(`date`) - DAYOFYEAR(CURTIME()) BETWEEN 7 AND 14'
+        'nextweek' => ' WHERE DAYOFYEAR(`date`) - DAYOFYEAR(CURTIME()) BETWEEN 7 AND 14',
+        'overdue' => ' WHERE `date`< CURDATE()'
     ]; 
     $sort = $range[$_GET['option']];
     foreach ($dbo->query("SELECT * FROM `$table_name` $sort;") as $row)

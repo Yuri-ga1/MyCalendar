@@ -6,6 +6,7 @@
 }
 
 .active_tasks{
+    text-align: center;
     padding-top: 1%;
     width: 47%;
     float: left;
@@ -13,9 +14,9 @@
 }
 
 .task_filter{
-    display: flex;
-    float: right;
-    margin-right: 5%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 3%;
 }
 
 input[type=radio]{
