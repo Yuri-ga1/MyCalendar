@@ -6,6 +6,7 @@
 }
 
 .active_tasks{
+    padding-top: 1%;
     width: 47%;
     float: left;
     border: 1px solid black;
@@ -16,6 +17,29 @@
     float: right;
     margin-right: 5%;
 }
+
+input[type=radio]{
+    display: none;
+}
+
+input[type=radio]+label {
+    display: inline-block;
+    margin: -2px;
+    padding: 4px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #fffd89;
+    background-repeat: repeat-x;
+  }
+
+input[type=radio]:checked+label {
+    outline: 0;
+    background-color: #fffb00;
+  }
 
 .right_border{
     border-right: 1px solid black;
