@@ -5,14 +5,10 @@
     <body>
         <div class='active_tasks'>
             <div class='task_filter'>
-                <table>
-                    <tr>
-                        <td class="right_border">сегодня</td>
-                        <td class="right_border">завтра</td>
-                        <td class="right_border">на эту неделю</td>
-                        <td>на след неделю</td>
-                    </tr>
-                </table>
+                <input name="date_filter" type="radio" value="today" checked/>сегодня
+                <input name="date_filter" type="radio" value="tomorrow"/>завтра
+                <input name="date_filter" type="radio" value="thisWeek"/>на эту неделю
+                <input name="date_filter" type="radio" value="nextWeek"/>на след неделю
             </div>
             <table class='task_table'>
                 <tr class='tablehead'>
@@ -62,13 +58,13 @@
                 <input name="type_name" type="radio" value="Conference"/>Conference
                 <input name="type_name" type="radio" value="Work"/>Work</p>
 
-                <p><input name="place" type="text" placeholder="Place"/></p>
+                <p><input name="place" type="text" placeholder="Place" defaultValue=""/></p>
 
                 <p><input name="dateandtime" type="date"/></p>
 
-                <p><input name="duration" type="number" placeholder="duration"/></p>
+                <p><input name="duration" type="number" placeholder="duration (minutes)" defaultValue="1"/></p>
 
-                <p><input name="comment" type="text" placeholder="Comment"/></p>
+                <p><input name="comment" type="text" placeholder="Comment" defaultValue="1"/></p>
 
                 <button type="submit">Create note</button>
             </form>

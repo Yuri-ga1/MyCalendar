@@ -15,10 +15,10 @@
 
     $theme = $_POST['theme'];
     $type = $_POST['type_name'];
-    $place = $_POST['place'];
-    $dateandtime = $_POST['dateandtime'];
-    $duration = $_POST['duration'];
-    $comment = $_POST['comment'];
+    $place = empty($_POST['place']) ? '-' : $_POST['place'];
+    $dateandtime = empty($_POST['dateandtime']) ? '1970-01-01' : $_POST['dateandtime'];
+    $duration = empty($_POST['duration']) ? 0 : $_POST['duration'];
+    $comment = empty($_POST['comment']) ? '-' : $_POST['comment'];
 
     $type_list = [
         'Meeting' => 1,
