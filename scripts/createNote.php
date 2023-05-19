@@ -16,7 +16,7 @@
     $theme = $_POST['theme'];
     $type = $_POST['type_name'];
     $place = empty($_POST['place']) ? '-' : $_POST['place'];
-    $dateandtime = empty($_POST['dateandtime']) ? '1970-01-01' : $_POST['dateandtime'];
+    $dateandtime = empty($_POST['dateandtime']) ? date("Y-m-d") : $_POST['dateandtime'];
     $duration = empty($_POST['duration']) ? 0 : $_POST['duration'];
     $comment = empty($_POST['comment']) ? '-' : $_POST['comment'];
 
@@ -39,6 +39,6 @@
         ':comment' => $comment,
     ]);
 
-    header("Location: index.php");
+    header("Location: ../index.php");
     die();
 ?>

@@ -1,8 +1,14 @@
 .create_note{
-    border: 1px solid blue;
     width: 47%;
     float: right;
     padding-left: 5px;
+}
+
+.form_create_note{
+    background-color: #e4d5f7;
+    margin-left: 30%;
+    margin-right: 31%;
+    padding: 1%;
 }
 
 .active_tasks{
@@ -35,12 +41,12 @@ input[type=radio]+label {
     cursor: pointer;
     background-color: #fffd89;
     background-repeat: repeat-x;
-  }
+}
 
 input[type=radio]:checked+label {
     outline: 0;
     background-color: #fffb00;
-  }
+}
 
 .right_border{
     border-right: 1px solid black;
@@ -65,4 +71,27 @@ input[type=radio]:checked+label {
     margin-right: auto;
     padding-top: 5px;
     padding-bottom: 5px;
+}
+
+.center{
+    text-align: center;
+}
+
+input[type=checkbox]+label {
+    text-align: center;
+    display: inline-block;
+    color: #89ffa1;
+    width: 100%;
+    height: 100%;
+    line-height: 20px;
+    cursor: pointer;
+    background-color: #89ffa1;
+    background-repeat: repeat-x;
+}
+
+input[type=checkbox]:checked+label {
+    text-align: center;
+    outline: 0;
+    color: #7300ff;
+    background-color: #7300ff;
 }

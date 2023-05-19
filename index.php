@@ -24,10 +24,17 @@
 
                 <input id='date_filter_id6' name="date_filter" type="radio" value="overdue"/>
                 <label for='date_filter_id6'>просроченные</label>
+
+                <input id='date_filter_id7' name="date_filter" type="radio" value="currect"/>
+                <label for='date_filter_id7'>текущие</label>
             </div>
 
-            <div id="fetch">
-            </div>
+            <form action="scripts/delete.php" method='post'>
+                <div id="fetch">
+                </div>
+                <input type='submit' value='delete'/>
+            </form>
+            
             <script>
                 $(document).ready(function() {
                     $('input[name="date_filter"]').change(function() {
@@ -49,28 +56,30 @@
         </div>
 
         <div class="create_note">
-            <form action="script/php.php" method="post">
-                <p><input name="theme" type="text" placeholder="Theme"/></p>
+            <div class="form_create_note">
+                <form action="scripts/createNote.php" method="post">
+                    <p><input name="theme" type="text" placeholder="Theme"/></p>
 
-                <p><input id='meeting' name="type_name" type="radio" value="Meeting"/>
-                <label for='meeting'>Meeting</label>
-                <input id='call' name="type_name" type="radio" value="Call"/>
-                <label for='call'>Call</label>
-                <input id='conference' name="type_name" type="radio" value="Conference"/>
-                <label for='conference'>Conference</label>
-                <input id='work' name="type_name" type="radio" value="Work"/>
-                <label for='work'>Work</label></p>
+                    <p><input id='meeting' name="type_name" type="radio" value="Meeting"/>
+                    <label for='meeting'>Meeting</label>
+                    <input id='call' name="type_name" type="radio" value="Call"/>
+                    <label for='call'>Call</label>
+                    <input id='conference' name="type_name" type="radio" value="Conference"/>
+                    <label for='conference'>Conference</label>
+                    <input id='work' name="type_name" type="radio" value="Work"/>
+                    <label for='work'>Work</label></p>
 
-                <p><input name="place" type="text" placeholder="Place" defaultValue=""/></p>
+                    <p><input name="place" type="text" placeholder="Place" defaultValue=""/></p>
 
-                <p><input name="dateandtime" type="date"/></p>
+                    <p><input name="dateandtime" type="date"/></p>
 
-                <p><input name="duration" type="number" placeholder="duration (minutes)" defaultValue="1"/></p>
+                    <p><input name="duration" type="number" placeholder="duration (minutes)" defaultValue="1"/></p>
 
-                <p><input name="comment" type="text" placeholder="Comment" defaultValue="1"/></p>
+                    <p><input name="comment" type="text" placeholder="Comment" defaultValue="1"/></p>
 
-                <button type="submit">Create note</button>
-            </form>
+                    <button type="submit">Create note</button>
+                </form>
+            </div>
         </div>
     </body>
 </html>
