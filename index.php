@@ -9,7 +9,7 @@
         <div class='active_tasks'>
             <div class='task_filter'>
                 <form>
-                    <input id='date_filter_id1' name="date_filter" type="radio" value="today" checked/>
+                    <input id='date_filter_id1' name="date_filter" type="radio" value="today"/>
                     <label for='date_filter_id1'>сегодня</label>
 
                     <input id='date_filter_id2' name="date_filter" value="tomorrow" type="radio"/>
