@@ -7,9 +7,9 @@
         $delete = $_POST['rowDelete'];
         $N = count($delete);
 
-        $dbname = 'notes_db';
-        $username = 'root';
-        $password ='';
+        $dbname = 'calendardyegor92';
+        $username = 'calendardyegor92';
+        $password ='NZ9Ije1S';
         $table_name = 'tasks';
         $dbo = new PDO('mysql:host=localhost;dbname=' . $dbname, $username, $password);
 

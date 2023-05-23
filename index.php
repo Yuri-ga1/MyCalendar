@@ -2,6 +2,24 @@
     <head>
         <link rel="stylesheet" href="css.css" type="text/css"/>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            function showHide(element_id) {
+                if (document.getElementById(element_id)) {
+                    var window =document.getElementById('modal_window');
+                    var obj = document.getElementById(element_id); 
+                    if (obj.style.display != "block") { 
+                        obj.style.display = "block";
+                        window.style.display = "block";
+                    }
+                    else {
+                        obj.style.display = "none";
+                        window.style.display = "none";
+                    }
+                }
+                else alert("Элемент с id: " + element_id + " не найден!"); 
+            }   
+        </script>
+
     </head>
     <body>
         <div class='active_tasks'>
@@ -32,9 +50,9 @@
             <form action="scripts/delete.php" method='post'>
                 <div id="fetch">
                 </div>
-                <input type='submit' value='delete'/>
+                <input type='submit' value='Удалить'/>
             </form>
-            
+
             <script>
                 $(document).ready(function() {
                     $('input[name="date_filter"]').change(function() {
@@ -58,26 +76,26 @@
         <div class="create_note">
             <div class="form_create_note">
                 <form action="scripts/createNote.php" method="post">
-                    <p><input name="theme" type="text" placeholder="Theme"/></p>
+                    <p><input name="theme" type="text" placeholder="Theme" required/></p>
 
                     <p><input id='meeting' name="type_name" type="radio" value="Meeting"/>
-                    <label for='meeting'>Meeting</label>
+                    <label for='meeting'>Встреча</label>
                     <input id='call' name="type_name" type="radio" value="Call"/>
-                    <label for='call'>Call</label>
+                    <label for='call'>Звонок</label>
                     <input id='conference' name="type_name" type="radio" value="Conference"/>
-                    <label for='conference'>Conference</label>
+                    <label for='conference'>Совещание</label>
                     <input id='work' name="type_name" type="radio" value="Work"/>
-                    <label for='work'>Work</label></p>
+                    <label for='work'>Работа</label></p>
 
-                    <p><input name="place" type="text" placeholder="Place" defaultValue=""/></p>
+                    <p><input name="place" type="text" placeholder="Place"/></p>
 
-                    <p><input name="dateandtime" type="date"/></p>
+                    <p><input name="date" type="date"/></p>
 
-                    <p><input name="duration" type="number" placeholder="duration (minutes)" defaultValue="1"/></p>
+                    <p><input name="duration" type="number" placeholder="duration (minutes)"/></p>
 
-                    <p><input name="comment" type="text" placeholder="Comment" defaultValue="1"/></p>
+                    <p><input name="comment" type="text" placeholder="Comment"/></p>
 
-                    <button type="submit">Create note</button>
+                    <button type="submit">Создать</button>
                 </form>
             </div>
         </div>
